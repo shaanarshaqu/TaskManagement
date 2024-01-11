@@ -43,7 +43,7 @@ namespace TaskManagement.Controllers
         }
 
 
-        [HttpPost("addTask")]
+        [HttpPost("AddTask")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
