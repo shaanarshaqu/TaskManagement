@@ -14,7 +14,6 @@ namespace TaskManagement.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        List <int> num = new List<int> { 1,2,34,5,5,6};
         private readonly IUsers _users_list;
         private readonly IConfiguration _configuration;
         public UserController(IUsers users, IConfiguration configuration)
