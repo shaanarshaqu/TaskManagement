@@ -22,7 +22,7 @@ namespace TaskManagement.Controllers
             _configuration = configuration;
         }
 
-        [HttpGet(Name="getuser")]
+        [HttpGet(Name="Getuser")]
         [Authorize(Roles = "admin")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Get()
@@ -31,7 +31,7 @@ namespace TaskManagement.Controllers
             return Ok(data);
         }
 
-        [HttpPost("register")]
+        [HttpPost("Register")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Post([FromBody]UserDto userdata)
         {       
@@ -46,11 +46,11 @@ namespace TaskManagement.Controllers
             }
             userdata.Id = data.OrderByDescending(x => x.Id).FirstOrDefault().Id+1;
             _users_list.AddUser(userdata);
-            return CreatedAtRoute("getuser",new{ id= userdata.Id}, userdata);
+            return CreatedAtRoute("Getuser",new{ id= userdata.Id}, userdata);
         }
 
 
-        [HttpPost("validate")]
+        [HttpPost("Validate")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Validate([FromBody] LoginCredentials userdata)
         {
