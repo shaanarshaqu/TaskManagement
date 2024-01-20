@@ -12,6 +12,7 @@ namespace TaskManagement.Models
             new UserDto { Id = 4,Name="shaan",Password="123455678",Role="admin"},
             new UserDto { Id = 4,Name="Raneen",Password="123455678",Role="user"},
             new UserDto { Id = 4,Name="Raja",Password="123455678",Role="user"},
+            new UserDto { Id = 4,Name="rrtfff",Password="123455678",Role="user"},
         };
 
         public List<UserDto> DisplayUsers()
